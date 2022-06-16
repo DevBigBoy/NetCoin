@@ -10,7 +10,7 @@
 * ===============
 */
 :root {
-  --header-height: 3.5rem;
+  --header-height: 4.5rem;
   /*========== Colors ==========*/
   --first-color: hsl(36, 72%, 48%);
   --first-color-alt: hsl(36, 72%, 44%);
@@ -23,7 +23,7 @@
   --container-color: #fff;
   /*========== Font and typography ==========*/
   --body-font: "Exo", sans-serif;
-  --biggest-font-size: 2.25rem;
+  --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -40,7 +40,7 @@
 }
 @media (min-width: 968px) {
   :root {
-    --biggest-font-size: 4.5rem;
+    --biggest-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -108,7 +108,7 @@ button {
 * =======================
 */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin-inline: 1.5rem;
 }
 
@@ -136,6 +136,164 @@ button {
   background-color: var(--first-color);
 }
 
+/*
+* ===============
+*  HEADER & NAV 
+* ===============
+*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 1rem;
+  left: 0;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo {
+  font-size: var(--h2-font-size);
+  color: #fff;
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.nav__logo:hover {
+  color: var(--first-color);
+}
+.nav__toggle {
+  font-size: var(--h2-font-size);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+}
+.nav__menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.nav__link {
+  color: #fff;
+  font-size: var(--h3-font-size);
+  display: inline-flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+  font-weight: var(--font-medium);
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.nav__link:hover {
+  color: var(--first-color);
+}
+.nav__link i {
+  font-size: 1.25rem;
+}
+.nav__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Show menu */
+.show-menu {
+  right: 0;
+}
+
+/* Change background header */
+/* Active link */
+/*
+* ===============
+*     HOME 
+* ===============
+*/
+.home {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.home__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home__data {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.home__title {
+  font-size: var(--biggest-font-size);
+  color: #fff;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 3rem;
+}
+.home__link {
+  display: inline-flex;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
+  max-width: 300px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+  padding: 0.75rem 1.5rem 0.75rem;
+  border: 1px solid var(--black-color);
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.home__link::after {
+  content: "";
+  background-color: #fff;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 0.5rem;
+  left: 0.5rem;
+  transition: 0.3s;
+}
+.home__link i {
+  font-size: 1.25rem;
+}
+.home__link:hover::after {
+  background-color: var(--first-color);
+  top: 0px;
+  left: 0px;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
@@ -147,6 +305,13 @@ button {
 @media screen and (min-width: 767px) {
   .section {
     padding: 8rem 0 1rem;
+  }
+
+  .header__nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .header__toggle {
+    font-size: 2rem;
   }
 }
 /* For large devices */
