@@ -10,6 +10,7 @@
   left: 0;
   background-color: transparent;
   z-index: var(--z-fixed);
+  transition: 0.3s;
 }
 
 .nav {
@@ -87,5 +88,19 @@
 }
 
 /* Change background header */
+.scroll-header {
+  background-color: var(--body-color);
+  box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+}
+.scroll-header.header {
+  top: 0;
+}
+.scroll-header .nav__logo,
+.scroll-header .nav__toggle {
+  color: var(--title-color);
+}
 
 /* Active link */
+.active-link {
+  color: var(--first-color);
+}

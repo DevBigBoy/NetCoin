@@ -1,0 +1,71 @@
+/*
+* ===============
+*    SERVICES 
+* ===============
+*/
+
+.services {
+  background-color: #fff;
+
+  &__container {
+    background-color: var(--text-color);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    font-size: var(--h1-font-size);
+    color: #fff;
+    text-align: center;
+    line-height: 140%;
+  }
+
+  &__content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  &__card {
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__icon {
+    width: 55px;
+    height: 55px;
+    background-color: var(--black-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    transition: 0.3s;
+    & i {
+      transition: 0.3s;
+      font-size: 1.25rem;
+    }
+
+    &:hover i {
+      color: var(--first-color);
+    }
+  }
+
+  &__card-title {
+    margin-bottom: 1rem;
+    font-size: var(--h2-font-size);
+  }
+
+  &__card-description {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+  }
+}

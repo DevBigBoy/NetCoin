@@ -18,3 +18,42 @@ if (navClose) {
   });
 }
 //*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll(".nav__link");
+
+function linkAction() {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.remove("show-menu");
+}
+navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+//*=============== CHANGE BACKGROUND HEADER ===============*/
+const scrollHeader = () => {
+  const header = document.getElementById("header");
+
+  this.scrollY >= 50
+    ? header.classList.add("scroll-header")
+    : header.classList.remove("scroll-header");
+};
+window.addEventListener("scroll", scrollHeader);
+
+//*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+//*=============== ؛PROJECT SWIPER ===============*/
+
+let swiperProject = new Swiper(".project__container", {
+  loop: true,
+  spaceBetween: 20,
+  slidesPerView: "auto",
+  grabCursor: true,
+  centeredSlides: true,
+
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
+  },
+});

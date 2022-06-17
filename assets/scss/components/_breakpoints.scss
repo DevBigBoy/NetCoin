@@ -1,4 +1,8 @@
-/*=============== BREAKPOINTS ===============*/
+/*
+* ===============
+* BREAKPOINTS 
+*===============
+*/
 
 /* For small devices */
 @media screen and (max-width: 320px) {
@@ -10,7 +14,7 @@
 /* For medium devices */
 @media screen and (min-width: 767px) {
   .section {
-    padding: 8rem 0 1rem;
+    padding: 7rem 0 2rem;
   }
 
   .header {
@@ -19,6 +23,12 @@
     }
     &__toggle {
       font-size: 2rem;
+    }
+  }
+
+  .services {
+    &__container {
+      padding: 2.5rem 3rem;
     }
   }
 }
