@@ -35,42 +35,25 @@
   &__link {
     display: inline-flex;
     column-gap: 0.5rem;
-    width: 100%;
-    justify-content: center;
-    max-width: 300px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
+    align-items: center;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 0.25rem;
     letter-spacing: 2px;
-    color: #000;
-    padding: 0.75rem 1.5rem 0.75rem;
-    border: 1px solid var(--black-color);
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-
-    &::after {
-      content: "";
-      background-color: #fff;
-      width: 100%;
-      z-index: -1;
-      position: absolute;
-      height: 100%;
-      top: 0.5rem;
-      left: 0.5rem;
-      transition: 0.3s;
-    }
+    text-transform: uppercase;
+    font-weight: var(--font-medium);
+    font-size: var(--h3-font-size);
+    transition: 0.5s;
 
     & i {
       font-size: 1.25rem;
     }
 
-    &:hover::after {
-      background-color: var(--first-color);
-      top: 0px;
-      left: 0px;
+    &:hover {
+      background-color: #fff;
+      color: #222;
+      letter-spacing: 6px;
     }
   }
 }

@@ -39,3 +39,10 @@
     margin-inline: auto;
   }
 }
+@media screen and (min-width: 1400px) {
+  .project {
+    &__card {
+      width: min(100%, 950px);
+    }
+  }
+}

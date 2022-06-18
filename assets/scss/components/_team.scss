@@ -1,0 +1,95 @@
+/*
+* ===============
+*    TEAM
+* ===============
+*/
+.team {
+  background-color: #fff;
+
+  &__content {
+    padding-bottom: 3rem;
+    position: relative;
+  }
+
+  &__card {
+    width: 350px;
+    text-align: center;
+  }
+
+  &__card:hover &__overlay {
+    top: 0;
+  }
+
+  &__card:hover &__data {
+    opacity: 1;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background-color: hsla(0, 0%, 90%, 0.8);
+    transition: 0.4s;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__data {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    transition: 0.4s;
+    opacity: 0;
+
+    &-group {
+      padding: 0.75rem;
+      border-radius: 50%;
+      display: inline-flex;
+      transition: 0.3s;
+      background-color: #111;
+
+      & i {
+        color: #fff;
+        transition: 0.3s;
+        font-size: 1.15rem;
+      }
+
+      &:hover i {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background-color: var(--first-color);
+        color: #111;
+      }
+    }
+  }
+
+  &__title {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: var(--text-color);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--first-color);
+}

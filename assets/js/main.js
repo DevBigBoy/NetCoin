@@ -37,8 +37,32 @@ const scrollHeader = () => {
 window.addEventListener("scroll", scrollHeader);
 
 //*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-//*=============== ؛PROJECT SWIPER ===============*/
 
+//*=============== TEAM SWIPER ===============*/
+let swiperPopular = new Swiper(".team__content", {
+  loop: true,
+  spaceBetween: 24,
+  slidesPerView: "auto",
+  grabCursor: true,
+  centeredSlides: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      spaceBetween: 48,
+    },
+  },
+});
+
+//*=============== PROJECT SWIPER ===============*/
 let swiperProject = new Swiper(".project__container", {
   loop: true,
   spaceBetween: 20,

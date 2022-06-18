@@ -6,7 +6,7 @@
 .header {
   position: fixed;
   width: 100%;
-  top: 1rem;
+  top: 0;
   left: 0;
   background-color: transparent;
   z-index: var(--z-fixed);
@@ -92,9 +92,7 @@
   background-color: var(--body-color);
   box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
 }
-.scroll-header.header {
-  top: 0;
-}
+
 .scroll-header .nav__logo,
 .scroll-header .nav__toggle {
   color: var(--title-color);
