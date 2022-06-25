@@ -1,0 +1,62 @@
+/*
+* ===============
+*  NEWSLETTER 
+* ===============
+*/
+.newsletter {
+  background-color: #fff;
+
+  &__container {
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 2rem 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: var(--h1-font-size);
+    margin-bottom: 1rem;
+  }
+
+  &__desciption {
+    font-weight: 400;
+    font-size: var(--normal-font-size);
+  }
+
+  &__subscribe {
+    display: flex;
+    column-gap: 0.5rem;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+    width: 90%;
+    font-size: var(--normal-font-size);
+
+    &::placeholder {
+      color: var(--black-color);
+      font-size: var(--normal-font-size);
+      font-weight: var(--font-semi-bold);
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--black-color);
+  color: #fff;
+  padding: 1.125rem 2rem;
+  font-weight: var(--font-semi-bold);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-0.25rem);
+}
+

@@ -31,6 +31,14 @@
       padding: 2.5rem 3rem;
     }
   }
+
+  .newsletter__container {
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    align-items: center;
+    padding: 4.5rem 2rem;
+    column-gap: 5rem;
+  }
 }
 
 /* For large devices */
