@@ -17,19 +17,9 @@
   padding: 4.5rem 0 2rem;
 
   &__title {
-    position: relative;
     font-size: var(--h1-font-size);
-    padding-left: 1.25rem;
-    margin-bottom: 2.5rem;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 8px;
-      left: 0;
-      width: 3px;
-      height: 20px;
-      background-color: var(--first-color);
-    }
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 3rem;
+    text-align: center;
   }
 }

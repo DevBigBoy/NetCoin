@@ -1,12 +1,10 @@
 /*
 * ===============
-*    SERVICES 
+*    features 
 * ===============
 */
-
-.services {
+.features {
   background-color: #fff;
-
   &__container {
     background-color: var(--text-color);
     padding: 1.5rem 2rem;
@@ -14,11 +12,8 @@
   }
 
   &__title {
-    margin-bottom: 3rem;
-    font-size: var(--h1-font-size);
     color: #fff;
-    text-align: center;
-    line-height: 140%;
+    font-weight: var(--font-bold);
   }
 
   &__content {
@@ -35,6 +30,15 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    transition: 0.4s;
+
+    &:hover {
+      transform: translateY(-0.3rem);
+    }
+
+    &:hover i {
+      color: var(--first-color);
+    }
   }
 
   &__icon {
@@ -45,17 +49,12 @@
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
     transition: 0.3s;
     & i {
       transition: 0.3s;
       font-size: 1.25rem;
-    }
-
-    &:hover i {
-      color: var(--first-color);
     }
   }
 

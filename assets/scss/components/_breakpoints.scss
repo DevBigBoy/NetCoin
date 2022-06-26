@@ -3,7 +3,6 @@
 * BREAKPOINTS 
 *===============
 */
-
 /* For small devices */
 @media screen and (max-width: 320px) {
   .container {
@@ -14,7 +13,7 @@
 /* For medium devices */
 @media screen and (min-width: 767px) {
   .section {
-    padding: 7rem 0 2rem;
+    padding: 6rem 0 3rem;
   }
 
   .header {
@@ -26,9 +25,25 @@
     }
   }
 
-  .services {
+  .features {
     &__container {
       padding: 2.5rem 3rem;
+    }
+  }
+
+  .book {
+    &__content {
+      gap: 4rem;
+    }
+    &__data {
+      order: initial;
+      align-items: center;
+      margin-block: auto;
+      max-width: 600px;
+      margin-right: auto;
+    }
+    &__img {
+      width: 400px;
     }
   }
 
@@ -46,9 +61,13 @@
   .container {
     margin-inline: auto;
   }
+  .section__title {
+    margin-bottom: 4rem;
+  }
 }
+
 @media screen and (min-width: 1400px) {
-  .project {
+  .services {
     &__card {
       width: min(100%, 950px);
     }

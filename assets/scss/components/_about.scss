@@ -1,0 +1,76 @@
+/*
+* ===============
+*  BOOK
+* ===============
+*/
+.book {
+  background-color: #fff;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__data {
+    flex: 300px 1 1;
+    text-align: center;
+    order: 2;
+  }
+
+  &__description {
+    margin-bottom: 2rem;
+    font-size: var(--h3-font-size);
+    text-align: center;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--black-color);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    width: 300px;
+    justify-self: center;
+    overflow: hidden;
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+/*
+* ===============
+*    LoGos
+* ===============
+*/
+
+.logo {
+  background-color: #fff;
+}
+
+.logo__container {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-top: 1px solid var(--text-color-light);
+  padding-block: 2.5rem;
+}
+.logo__img {
+  width: 130px;
+  mix-blend-mode: luminosity;
+  opacity: 0.4;
+  transition: 0.4s;
+  justify-self: center;
+}
+.logo__img:hover {
+  opacity: 0.8;
+}

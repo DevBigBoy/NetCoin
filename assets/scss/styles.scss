@@ -3,10 +3,11 @@
 @use "./layout/layout";
 @use "./components/header";
 @use "./components/home";
-@use "./components/services";
+@use "./components//features";
 @use "./components/projects";
+@use "./components/about";
 @use "./components/team";
 @use "./components/blog";
 @use "./components/contact";
-@use "./components/_footer";
+@use "./components/footer";
 @use "./components/breakpoints";

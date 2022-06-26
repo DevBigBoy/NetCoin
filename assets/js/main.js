@@ -63,7 +63,7 @@ let swiperPopular = new Swiper(".team__content", {
 });
 
 //*=============== PROJECT SWIPER ===============*/
-let swiperProject = new Swiper(".project__container", {
+let swiperServices = new Swiper(".services__container", {
   loop: true,
   spaceBetween: 20,
   slidesPerView: "auto",
