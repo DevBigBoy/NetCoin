@@ -10,7 +10,7 @@
 * ===============
 */
 :root {
-  --header-height: 4.5rem;
+  --header-height: 3.5rem;
   /*========== Colors ==========*/
   --first-color: hsl(36, 72%, 48%);
   --first-color-alt: hsl(36, 72%, 44%);
@@ -108,7 +108,7 @@ button {
 * =======================
 */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin-inline: 1.5rem;
 }
 
@@ -254,8 +254,7 @@ button {
 .home__title {
   font-size: var(--biggest-font-size);
   color: #fff;
-  font-weight: 700;
-  line-height: 150%;
+  font-weight: 600;
   margin-bottom: 3rem;
 }
 .home__link {
@@ -695,10 +694,9 @@ button {
   font-size: var(--small-font-size);
 }
 .footer__content {
-  gap: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--text-color);
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .footer__subtitle {
   color: #fff;
@@ -791,11 +789,12 @@ button {
     padding: 6rem 0 3rem;
   }
 
-  .header__nav {
-    height: calc(var(--header-height) + 1.5rem);
-  }
   .header__toggle {
     font-size: 2rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
   }
 
   .features__container {
